@@ -11,7 +11,6 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, ForeignKey, DateTime, Text, Integer, MetaData
 
 
-#задает читаемые имена ограничений
 class Base(DeclarativeBase):
   metadata = MetaData(naming_convention={
         "ix": 'ix_%(column_0_label)s',
@@ -129,11 +128,9 @@ class Review(Base):
     text: Mapped[str] = mapped_column(Text, nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.now)
 
-    # связи с курсом и пользователем
     course_id: Mapped[int] = mapped_column(ForeignKey('courses.id'))
     user_id:   Mapped[int] = mapped_column(ForeignKey('users.id'))
 
-    # отношения
     course: Mapped["Course"] = relationship('Course', back_populates='reviews')
     user:   Mapped["User"]   = relationship('User',   back_populates='reviews')
 
