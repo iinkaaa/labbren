@@ -33,7 +33,8 @@ class User(db.Model, UserMixin):
     role = db.relationship('Role', backref='users')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-db.create_all()
+with app.app_context():
+    db.create_all()
 
 @login_manager.user_loader
 def load_user(user_id):
