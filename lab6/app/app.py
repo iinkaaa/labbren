@@ -14,10 +14,6 @@ db.init_app(app)
 migrate = Migrate(app, db)
 with app.app_context():
     db.create_all()
-    if not Category.query.first():
-        db.session.add(Category(name="Программирование"))
-        db.session.add(Category(name="Математика"))
-        db.session.commit()
 
 init_login_manager(app) 
 
