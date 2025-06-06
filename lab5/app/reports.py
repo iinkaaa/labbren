@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, make_response, request
 from io import StringIO
 import csv
-from app import VisitLog, User, db
+from .app import VisitLog, User, db
 from flask_login import login_required, current_user
 from auth import check_rights
 
