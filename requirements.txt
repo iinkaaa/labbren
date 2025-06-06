@@ -12,4 +12,3 @@ flask-login
 flask_bootstrap
 flask_wtf
 flask-sqlalchemy
-SQLAlchemy
