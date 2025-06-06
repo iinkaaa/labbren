@@ -266,7 +266,7 @@ def change_password():
                 return redirect(url_for('index'))
     return render_template('change_password.html')
 
-from reports import bp as reports_bp
+from .reports import bp as reports_bp
 app.register_blueprint(reports_bp)
 
 @app.before_request
