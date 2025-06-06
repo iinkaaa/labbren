@@ -3,7 +3,7 @@ import uuid
 import os
 from werkzeug.utils import secure_filename
 from flask import current_app
-from models import db, Course, Image
+from .models import db, Course, Image
 
 class CoursesFilter:
     def __init__(self, name, category_ids):
