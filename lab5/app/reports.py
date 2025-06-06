@@ -3,7 +3,7 @@ from io import StringIO
 import csv
 from .app import VisitLog, User, db
 from flask_login import login_required, current_user
-from auth import check_rights
+from .auth import check_rights
 
 bp = Blueprint('reports', __name__)
 
