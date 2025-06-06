@@ -1,0 +1,15 @@
+click
+Faker
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+python-dateutil
+six
+Werkzeug
+gunicorn
+flask-login
+flask_bootstrap
+flask_wtf
+flask-sqlalchemy
+SQLAlchemy
